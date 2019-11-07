@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/31/2019 11:15:50 AM"
@@ -11,9 +11,2410 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{BB5150E3-1AC5-4459-A304-3886F66F2400}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{3F27D3AB-5DDB-4F20-AAD0-5D44F488AAA3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Cities]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E9914BD8-08D5-4705-ACDF-5FA53F622649}"
+      DTS:ObjectName="Flat File Connection Manager - Cities">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022__x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.Cities.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CityID"
+              DTS:DTSID="{8BFA169D-F3A9-40D0-8171-FB806FF852CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CityName"
+              DTS:DTSID="{47276C0D-E653-4184-9BB8-254EB6346A4A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Customers]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CE9CE4C3-05EA-4877-8679-7128BC6DD8F6}"
+      DTS:ObjectName="Flat File Connection Manager - Customers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022__x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.Customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{93ED9217-A184-4A33-B44B-9E235EC3C1F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="38"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerName"
+              DTS:DTSID="{0B41B656-7411-4F18-8370-12084B17E70C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DeliveryCityID"
+              DTS:DTSID="{EE1CA881-6356-41CB-A3BC-248D12E87FD8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Order Lines]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FDAF8DA5-7EA1-44B8-BF76-E6ECB467FFBD}"
+      DTS:ObjectName="Flat File Connection Manager - Order Lines">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.OrderLines.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockItemID"
+              DTS:DTSID="{908AE524-F94A-4CB3-9504-1BF297A98CF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderLineID"
+              DTS:DTSID="{6AC44AEF-834A-4810-A929-745F46773A53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderID"
+              DTS:DTSID="{D76E487E-9FE3-47D2-B505-69F24D9CD181}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity"
+              DTS:DTSID="{34720385-8917-4317-A41C-3809BF2A099C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8A53FBAF-2578-48D1-A1B2-1E4C7E5E43F3}"
+      DTS:ObjectName="Flat File Connection Manager - Orders">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.Orders.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderID"
+              DTS:DTSID="{40256D2B-60B4-4B80-866E-F1E963BE15BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{5C67E35E-CD87-4708-9939-9F04DB8247A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderDate"
+              DTS:DTSID="{1CC88947-DADB-43E3-8B29-6EB7963F435C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Stock Items]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{438A6905-E5F1-4F69-A97D-571231AB42F0}"
+      DTS:ObjectName="Flat File Connection Manager - Stock Items">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022__x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.StockItems.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockItemID"
+              DTS:DTSID="{696D7ACD-FDD7-43C4-896A-F273326693AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StockItemName"
+              DTS:DTSID="{014310E0-33C3-4655-B6AD-25FC71FB5A37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{B0B47E15-AD94-4E49-9C33-AF97E6280F13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brand"
+              DTS:DTSID="{CE159526-ACB3-4F70-A278-F98028E1AC58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxRate"
+              DTS:DTSID="{DE6629E5-94C0-4EAA-BA9D-D87A7917B0D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{4951551F-9E57-4F40-807B-C95A794FEAF4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RecommendedRetailPrice"
+              DTS:DTSID="{15A6AF96-7E07-4225-A324-6B5795A9662A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Suppliers]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EAA9A57C-C94B-4A82-80CF-86E14A0D0F14}"
+      DTS:ObjectName="Flat File Connection Manager - Suppliers">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022__x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Documents\SSIS CSVs\Task1.SSIS.Suppliers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{E15F13F3-2676-4CBD-A9D8-BC1202172B70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierName"
+              DTS:DTSID="{EB5DD06D-491A-4E45-8FB4-4B673A0E7ED0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2ECD3844-2DBF-4B29-AF4E-045F2BB1D291}"
+      DTS:ObjectName="LAPTOP-LEJVLN96.student#DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-LEJVLN96;Initial Catalog=student#DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - Import CSVs to SQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4F1DD1D5-8F8F-484C-8CFB-FF1C485DB7A6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - Import CSVs to SQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Cities"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Cities]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Cities]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].ExternalColumns[CityID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityID]"
+                      name="CityID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].ExternalColumns[CityName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityName]"
+                      name="CityName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].ExternalColumns[CityID]"
+                      dataType="i4"
+                      name="CityID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].ExternalColumns[CityName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CityName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Customers"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Customers]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Customers]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[CustomerName]"
+                      length="38"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerName]"
+                      name="CustomerName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[DeliveryCityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[DeliveryCityID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[DeliveryCityID]"
+                      name="DeliveryCityID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[CustomerName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="38"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].ExternalColumns[DeliveryCityID]"
+                      dataType="i4"
+                      name="DeliveryCityID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Order Lines"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Order Lines]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Order Lines]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[StockItemID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[StockItemID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[StockItemID]"
+                      name="StockItemID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderLineID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[OrderLineID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderLineID]"
+                      name="OrderLineID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[StockItemID]"
+                      dataType="i4"
+                      name="StockItemID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[OrderLineID]"
+                      dataType="i4"
+                      name="OrderLineID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Orders"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      dataType="date"
+                      name="OrderDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Stock Items"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Stock Items]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Stock Items]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[StockItemID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemID]"
+                      name="StockItemID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[StockItemName]"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemName]"
+                      name="StockItemName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      name="SupplierID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[Brand]"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[TaxRate]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[TaxRate]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[TaxRate]"
+                      name="TaxRate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[RecommendedRetailPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[RecommendedRetailPrice]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[RecommendedRetailPrice]"
+                      name="RecommendedRetailPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[StockItemID]"
+                      dataType="i4"
+                      name="StockItemID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[StockItemName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="StockItemName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[TaxRate]"
+                      dataType="cy"
+                      name="TaxRate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].ExternalColumns[RecommendedRetailPrice]"
+                      dataType="cy"
+                      name="RecommendedRetailPrice" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - Suppliers"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Suppliers]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Suppliers]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      name="SupplierID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].ExternalColumns[SupplierName]"
+                      length="24"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierName]"
+                      name="SupplierName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].ExternalColumns[SupplierName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="24"
+                      name="SupplierName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Cities"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[City]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].Columns[CityID]"
+                      cachedDataType="i4"
+                      cachedName="CityID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].Columns[CityName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CityName"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityName]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
+                      dataType="i4"
+                      name="CityID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CityName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Customers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[CustomerName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="38"
+                      cachedName="CustomerName"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[DeliveryCityID]"
+                      cachedDataType="i4"
+                      cachedName="DeliveryCityID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryCityID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[DeliveryCityID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="38"
+                      name="CustomerName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryCityID]"
+                      dataType="i4"
+                      name="DeliveryCityID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Order Lines"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[OrderLine]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[StockItemID]"
+                      cachedDataType="i4"
+                      cachedName="StockItemID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[StockItemID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[OrderLineID]"
+                      cachedDataType="i4"
+                      cachedName="OrderLineID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderLineID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderLineID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[Quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
+                      dataType="i4"
+                      name="StockItemID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderLineID]"
+                      dataType="i4"
+                      name="OrderLineID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Orders"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Order]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[OrderDate]"
+                      cachedDataType="date"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Stock Items"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[StockItem]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[StockItemID]"
+                      cachedDataType="i4"
+                      cachedName="StockItemID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[StockItemName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="StockItemName"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemName]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[Brand]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Brand"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[Brand]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[TaxRate]"
+                      cachedDataType="cy"
+                      cachedName="TaxRate"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[TaxRate]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[TaxRate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[RecommendedRetailPrice]"
+                      cachedDataType="cy"
+                      cachedName="RecommendedRetailPrice"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[RecommendedRetailPrice]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[RecommendedRetailPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
+                      dataType="i4"
+                      name="StockItemID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="StockItemName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[TaxRate]"
+                      dataType="cy"
+                      name="TaxRate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[RecommendedRetailPrice]"
+                      dataType="cy"
+                      name="RecommendedRetailPrice" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination - Suppliers"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Supplier]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].Columns[SupplierName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="24"
+                      cachedName="SupplierName"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierName]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="24"
+                      name="SupplierName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output2]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output3]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output4]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output5]"
+              endId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="255.2,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL"
+          TopLeft="288.000004904611,185.364708482023" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities"
+          TopLeft="678.857154418011,415.011770256993" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities"
+          TopLeft="688.57144029773,279.811768360864" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output]"
+          TopLeft="781.914297357871,321.411768360864">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93.6000018961288"
+              Start="0,0"
+              End="0,86.1000018961288">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.1000018961288" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers"
+          TopLeft="44.5714293304755,46.1176474363334" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items"
+          TopLeft="361.142863293083,48.0941175698409" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines"
+          TopLeft="688.00001171657,49.600000145856" />
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers"
+          TopLeft="43.4285721681556,281.694119903538" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders"
+          TopLeft="356.571434643804,278.023531616765" />
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers"
+          TopLeft="33.1428577072767,212.611767485728" />
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items"
+          TopLeft="346.285720182925,214.400001312705" />
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines"
+          TopLeft="678.857154418011,214.400001312705" />
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers"
+          TopLeft="35.4285720319164,411.388239369508" />
+        <NodeLayout
+          Size="212,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders"
+          TopLeft="345.142863020605,412.611768798432" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output1]"
+          TopLeft="149.057143518876,87.7176474363334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,124.894120049394"
+              Start="0,0"
+              End="0,117.394120049394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.394120049394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output2]"
+          TopLeft="467.114291738004,89.6941175698409">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,124.705883742864"
+              Start="0,0"
+              End="0,117.205883742864">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.205883742864" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output3]"
+          TopLeft="796.028583067291,91.200000145856">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,123.200001166849"
+              Start="0,0"
+              End="0,115.700001166849">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,115.700001166849" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output4]"
+          TopLeft="146.428572100036,323.294119903538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88.0941194659699"
+              Start="0,0"
+              End="0,80.5941194659699">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5941194659699" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output5]"
+          TopLeft="451.857148832204,319.623531616765">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92.9882371816669"
+              Start="0,0"
+              End="0,85.4882371816669">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.4882371816669" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
