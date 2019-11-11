@@ -11,11 +11,117 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{32350813-EC67-4D7D-B781-6610B95E6F43}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{F126180F-A3F6-4AF7-8EED-B78EBF8D464F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{094A3949-0171-41C1-B6E6-B56AC0166A1F}"
+      DTS:ObjectName="Flat File Connection Manager - Orders">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Desktop\Final Year Solutions\Databases\TransformData.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderID"
+              DTS:DTSID="{75437B60-6F91-4ECC-92D7-A5EB88927B04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{E19F7BBC-DEF9-45E2-ABAC-3D694139372A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderDate"
+              DTS:DTSID="{3F5B7B3D-0834-47F1-A1D2-00C0E51A36CE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager - Orders Errors]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5DA8EF00-ED3A-494B-969D-86E74397DC2B}"
+      DTS:ObjectName="Flat File Connection Manager - Orders Errors">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\death\Desktop\Final Year Solutions\Databases\errorlog.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderID"
+              DTS:DTSID="{C3C305EE-4E76-4474-99DB-A2E2264FEFAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{FF2545A9-7138-4C79-B11E-9D32DA00E2A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OrderDate"
+              DTS:DTSID="{8E34E709-692F-4644-A7F7-CA4CD01687AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{DA73BFD1-E3E5-4329-9507-0DDC6276B3BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{C2B290B0-729C-4834-BBBB-4B2A91BB29F7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
       DTS:CreationName="OLEDB"
@@ -516,7 +622,7 @@ where [refTable].[OrderID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task - Construct Fact Table\23:invalid};</property>
+                  name="ParameterMap">#{Package\Data Flow Task - Construct Fact Table\78:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -916,6 +1022,488 @@ where [refTable].[OrderID] = ?</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{28D39002-AB61-4635-8CA6-2CE4FD1DB68D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - Insert Orders with Conversion and Error Handling"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion - OrderData column to Datetime type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Inputs[Data Conversion Input].Columns[OrderDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="OrderDate"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Output].Columns[Copy of OrderDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Output].Columns[Copy of OrderDate]"
+                      name="Copy of OrderDate"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2057"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Orders Errors]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Orders Errors]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].Columns[OrderDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source - TransformData"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager - Orders]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].ExternalColumns[OrderDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="OrderDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Dimension].[Order]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-LEJVLN96.student#DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of OrderDate]"
+                      cachedDataType="date"
+                      cachedName="Copy of OrderDate"
+                      externalMetadataColumnId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Output].Columns[Copy of OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Error Output]"
+              endId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Data Conversion Error Output"
+              startId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Error Output]" />
+            <path
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -932,11 +1520,15 @@ where [refTable].[OrderID] = ?</property>
         <NodeLayout
           Size="306.4,41.6"
           Id="Package\Data Flow Task - Add Inserted Datetime Column"
-          TopLeft="68.0000011580331,96.6588248850153" />
+          TopLeft="33.7142862884366,39.1529417255759" />
         <NodeLayout
           Size="258.4,41.6"
           Id="Package\Data Flow Task - Construct Fact Table"
-          TopLeft="424.571435801837,98.4941190284016" />
+          TopLeft="364.000006198883,39.7647064400379" />
+        <NodeLayout
+          Size="394.4,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling"
+          TopLeft="33.7142862884366,110.729413317644" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -944,7 +1536,11 @@ where [refTable].[OrderID] = ?</property>
     design-time-name="Package\Data Flow Task - Add Inserted Datetime Column">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Destination - Order Lines"
+          TopLeft="79.4285727812319,244.400003427618" />
         <NodeLayout
           Size="214.4,41.6"
           Id="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Source - Order Lines"
@@ -972,13 +1568,11 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Destination - Order Lines"
-          TopLeft="79.4285727812319,244.400003427618" />
         <EdgeLayout
           Id="Package\Data Flow Task - Add Inserted Datetime Column.Paths[Derived Column Output]"
           TopLeft="196.342858218174,189.647060899834">
@@ -998,14 +1592,16 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Source - Order Lines">
+    design-time-name="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Destination - Order Lines">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1018,7 +1614,7 @@ where [refTable].[OrderID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Destination - Order Lines">
+    design-time-name="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Source - Order Lines">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1036,6 +1632,10 @@ where [refTable].[OrderID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="306.4,41.6"
+          Id="Package\Data Flow Task - Construct Fact Table\OLE DB Destination - Insert into Fact Sales table"
+          TopLeft="108,256" />
+        <NodeLayout
           Size="214.4,41.6"
           Id="Package\Data Flow Task - Construct Fact Table\OLE DB Source - Order Lines"
           TopLeft="153.6,50.4" />
@@ -1043,10 +1643,6 @@ where [refTable].[OrderID] = ?</property>
           Size="198.4,41.6"
           Id="Package\Data Flow Task - Construct Fact Table\Lookup - Get CustomerID"
           TopLeft="165.6,146.4" />
-        <NodeLayout
-          Size="306.4,41.6"
-          Id="Package\Data Flow Task - Construct Fact Table\OLE DB Destination - Insert into Fact Sales table"
-          TopLeft="108,256" />
         <EdgeLayout
           Id="Package\Data Flow Task - Construct Fact Table.Paths[Lookup Match Output]"
           TopLeft="263,188">
@@ -1090,12 +1686,27 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Construct Fact Table\OLE DB Destination - Insert into Fact Sales table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task - Construct Fact Table\OLE DB Source - Order Lines">
     <Properties>
@@ -1115,7 +1726,7 @@ where [refTable].[OrderID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1125,25 +1736,140 @@ where [refTable].[OrderID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Construct Fact Table\OLE DB Destination - Insert into Fact Sales table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Insert Orders with Conversion and Error Handling">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData"
+          TopLeft="121.306124514811,52.6991604029514" />
+        <NodeLayout
+          Size="334.4,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type"
+          TopLeft="60.5714296029537,160.107565270658" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Flat File Source Output]"
+          TopLeft="236.906124514811,94.2991604029514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.13469491185685,65.8084048677069"
+              Start="0,0"
+              End="-9.13469491185685,58.3084048677069">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.9042024338534" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.9042024338534"
+                    Point2="0,32.9042024338534"
+                    Point3="-4,32.9042024338534" />
+                  <mssgle:LineSegment
+                    End="-5.13469491185685,32.9042024338534" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.13469491185685,32.9042024338534"
+                    Point2="-9.13469491185685,32.9042024338534"
+                    Point3="-9.13469491185685,36.9042024338534" />
+                  <mssgle:LineSegment
+                    End="-9.13469491185685,58.3084048677069" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination"
+          TopLeft="31.8367352360538,306.75630682315" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Output]"
+          TopLeft="227.771429602954,201.707565270658">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.7346943669,105.048741552492"
+              Start="0,0"
+              End="-110.7346943669,97.5487415524915">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5243707762458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5243707762458"
+                    Point2="0,52.5243707762458"
+                    Point3="-4,52.5243707762458" />
+                  <mssgle:LineSegment
+                    End="-106.7346943669,52.5243707762458" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-106.7346943669,52.5243707762458"
+                    Point2="-110.7346943669,52.5243707762458"
+                    Point3="-110.7346943669,56.5243707762458" />
+                  <mssgle:LineSegment
+                    End="-110.7346943669,97.5487415524915" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination"
+          TopLeft="288.163270213514,304.941180074091" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Error Output]"
+          TopLeft="282.171429602954,201.707565270658">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91.5918406105599,103.233614803433"
+              Start="0,0"
+              End="91.5918406105599,95.7336148034331">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5883991065259" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5883991065259"
+                    Point2="0,41.5883991065259"
+                    Point3="4,41.5883991065259" />
+                  <mssgle:LineSegment
+                    End="87.5918406105599,41.5883991065259" />
+                  <mssgle:CubicBezierSegment
+                    Point1="87.5918406105599,41.5883991065259"
+                    Point2="91.5918406105599,41.5883991065259"
+                    Point3="91.5918406105599,45.5883991065259" />
+                  <mssgle:LineSegment
+                    End="91.5918406105599,95.7336148034331" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.2904664134701,46.5883991065259,132.1727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
