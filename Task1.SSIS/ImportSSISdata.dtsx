@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{3F27D3AB-5DDB-4F20-AAD0-5D44F488AAA3}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{BD4329C3-2CE7-4BB9-AE01-E8B64F0F4E54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1321,18 +1321,18 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].Columns[CityID]"
-                      cachedDataType="i4"
-                      cachedName="CityID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].Columns[CityName]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="CityName"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityName]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].Columns[CityID]"
+                      cachedDataType="i4"
+                      cachedName="CityID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities.Inputs[OLE DB Destination Input].ExternalColumns[CityID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities.Outputs[Flat File Source Output].Columns[CityID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1446,12 +1446,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[CustomerID]"
-                      cachedDataType="i4"
-                      cachedName="CustomerID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[CustomerName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1465,6 +1459,12 @@
                       cachedName="DeliveryCityID"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[DeliveryCityID]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[DeliveryCityID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers.Inputs[OLE DB Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers.Outputs[Flat File Source Output].Columns[CustomerID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1589,12 +1589,6 @@
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[StockItemID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[OrderLineID]"
-                      cachedDataType="i4"
-                      cachedName="OrderLineID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderLineID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderLineID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[OrderID]"
                       cachedDataType="i4"
                       cachedName="OrderID"
@@ -1606,6 +1600,12 @@
                       cachedName="Quantity"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].Columns[OrderLineID]"
+                      cachedDataType="i4"
+                      cachedName="OrderLineID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines.Inputs[OLE DB Destination Input].ExternalColumns[OrderLineID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines.Outputs[Flat File Source Output].Columns[OrderLineID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1726,12 +1726,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[OrderID]"
-                      cachedDataType="i4"
-                      cachedName="OrderID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[CustomerID]"
                       cachedDataType="i4"
                       cachedName="CustomerID"
@@ -1743,6 +1737,12 @@
                       cachedName="OrderDate"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders.Inputs[OLE DB Destination Input].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders.Outputs[Flat File Source Output].Columns[OrderID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1859,12 +1859,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[StockItemID]"
-                      cachedDataType="i4"
-                      cachedName="StockItemID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[StockItemName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1904,6 +1898,12 @@
                       cachedName="RecommendedRetailPrice"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[RecommendedRetailPrice]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[RecommendedRetailPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].Columns[StockItemID]"
+                      cachedDataType="i4"
+                      cachedName="StockItemID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items.Inputs[OLE DB Destination Input].ExternalColumns[StockItemID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items.Outputs[Flat File Source Output].Columns[StockItemID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2040,12 +2040,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].Columns[SupplierID]"
-                      cachedDataType="i4"
-                      cachedName="SupplierID"
-                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
-                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierID]" />
-                    <inputColumn
                       refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].Columns[SupplierName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2053,6 +2047,12 @@
                       cachedName="SupplierName"
                       externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierName]"
                       lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                      cachedDataType="i4"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      lineageId="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers.Outputs[Flat File Source Output].Columns[SupplierID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2156,111 +2156,67 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="235.2,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines"
+          TopLeft="678.857154418011,214.400001312705" />
+        <NodeLayout
           Size="206.4,41.6"
           Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities"
           TopLeft="678.857154418011,415.011770256993" />
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities"
-          TopLeft="688.57144029773,279.811768360864" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output]"
-          TopLeft="781.914297357871,321.411768360864">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,93.6000018961288"
-              Start="0,0"
-              End="0,86.1000018961288">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,86.1000018961288" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="210.4,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers"
-          TopLeft="44.5714293304755,46.1176474363334" />
-        <NodeLayout
-          Size="216.8,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items"
-          TopLeft="361.142863293083,48.0941175698409" />
-        <NodeLayout
-          Size="215.2,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines"
-          TopLeft="688.00001171657,49.600000145856" />
-        <NodeLayout
-          Size="204,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers"
-          TopLeft="43.4285721681556,281.694119903538" />
         <NodeLayout
           Size="192,41.6"
           Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Orders"
           TopLeft="356.571434643804,278.023531616765" />
         <NodeLayout
+          Size="212,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders"
+          TopLeft="345.142863020605,412.611768798432" />
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Customers"
+          TopLeft="44.5714293304755,46.1176474363334" />
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Suppliers"
+          TopLeft="43.4285721681556,281.694119903538" />
+        <NodeLayout
           Size="230.4,41.6"
           Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers"
           TopLeft="33.1428577072767,212.611767485728" />
+        <NodeLayout
+          Size="216.8,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Stock Items"
+          TopLeft="361.142863293083,48.0941175698409" />
         <NodeLayout
           Size="236.8,41.6"
           Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Stock Items"
           TopLeft="346.285720182925,214.400001312705" />
         <NodeLayout
-          Size="235.2,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines"
-          TopLeft="678.857154418011,214.400001312705" />
-        <NodeLayout
           Size="224,41.6"
           Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers"
           TopLeft="35.4285720319164,411.388239369508" />
         <NodeLayout
-          Size="212,41.6"
-          Id="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Orders"
-          TopLeft="345.142863020605,412.611768798432" />
+          Size="215.2,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Order Lines"
+          TopLeft="688.00001171657,49.600000145856" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Data Flow Task - Import CSVs to SQL\Flat File Source - Cities"
+          TopLeft="688.57144029773,279.811768360864" />
         <EdgeLayout
-          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output1]"
-          TopLeft="149.057143518876,87.7176474363334">
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output4]"
+          TopLeft="146.428572100036,323.294119903538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,124.894120049394"
+              EndConnector="0,88.0941194659699"
               Start="0,0"
-              End="0,117.394120049394">
+              End="0,80.5941194659699">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,117.394120049394" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output2]"
-          TopLeft="467.114291738004,89.6941175698409">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,124.705883742864"
-              Start="0,0"
-              End="0,117.205883742864">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,117.205883742864" />
+                    End="0,80.5941194659699" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2292,19 +2248,63 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output4]"
-          TopLeft="146.428572100036,323.294119903538">
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output2]"
+          TopLeft="467.114291738004,89.6941175698409">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,88.0941194659699"
+              EndConnector="0,124.705883742864"
               Start="0,0"
-              End="0,80.5941194659699">
+              End="0,117.205883742864">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.5941194659699" />
+                    End="0,117.205883742864" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output1]"
+          TopLeft="149.057143518876,87.7176474363334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,124.894120049394"
+              Start="0,0"
+              End="0,117.394120049394">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.394120049394" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Import CSVs to SQL.Paths[Flat File Source Output]"
+          TopLeft="781.914297357871,321.411768360864">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93.6000018961288"
+              Start="0,0"
+              End="0,86.1000018961288">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.1000018961288" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2339,6 +2339,19 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Cities">
     <Properties>
       <Property>
@@ -2352,7 +2365,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers">
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2378,20 +2391,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Order Lines">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Suppliers">
+    design-time-name="Package\Data Flow Task - Import CSVs to SQL\OLE DB Destination - Customers">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

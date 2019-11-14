@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{F126180F-A3F6-4AF7-8EED-B78EBF8D464F}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{005AF1AF-3BED-47AB-922D-61772C27AD19}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1536,7 +1536,7 @@ where [refTable].[OrderID] = ?</property>
     design-time-name="Package\Data Flow Task - Add Inserted Datetime Column">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="235.2,41.6"
           Id="Package\Data Flow Task - Add Inserted Datetime Column\OLE DB Destination - Order Lines"
@@ -1568,9 +1568,7 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1592,9 +1590,7 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1686,9 +1682,7 @@ where [refTable].[OrderID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1749,13 +1743,21 @@ where [refTable].[OrderID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="231.2,41.6"
-          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData"
-          TopLeft="121.306124514811,52.6991604029514" />
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination"
+          TopLeft="31.8367352360538,306.75630682315" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination"
+          TopLeft="288.163270213514,304.941180074091" />
         <NodeLayout
           Size="334.4,41.6"
           Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Data Conversion - OrderData column to Datetime type"
           TopLeft="60.5714296029537,160.107565270658" />
+        <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Source - TransformData"
+          TopLeft="121.306124514811,52.6991604029514" />
         <EdgeLayout
           Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Flat File Source Output]"
           TopLeft="236.906124514811,94.2991604029514">
@@ -1790,10 +1792,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\OLE DB Destination"
-          TopLeft="31.8367352360538,306.75630682315" />
         <EdgeLayout
           Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Output]"
           TopLeft="227.771429602954,201.707565270658">
@@ -1828,10 +1826,6 @@ where [refTable].[OrderID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling\Flat File Destination"
-          TopLeft="288.163270213514,304.941180074091" />
         <EdgeLayout
           Id="Package\Data Flow Task - Insert Orders with Conversion and Error Handling.Paths[Data Conversion Error Output]"
           TopLeft="282.171429602954,201.707565270658">
